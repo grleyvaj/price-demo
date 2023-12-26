@@ -11,14 +11,15 @@ La API fue documentada con `Open API Swagger`, y testeada con suite de pruebas e
     ```
       mvn clean install
     ```
-- Puerto 8000 disponible. Sino modificarlo usando la variable de entorno `ENV_PORT` o directamente en `application.yml`:
+- Puerto 8000 disponible. Sino modificarlo usando la variable de entorno `ENV_PORT` o directamente en `application.yml` [[here](https://github.com/grleyvaj/price-demo/blob/main/src/main/resources/application.yml)]:
   
       server:
          port: ${ENV_PORT:8000}
   
 - Ejecutar el proyecto:
-
-    `mvn spring-boot:run`
+    ```
+      mvn clean install
+    ```
 
 ### DOCUMENTACION SWAGGER:
 
