@@ -1,8 +1,8 @@
 package com.between.pricedemo.application.controller.brand;
 
+import com.between.pricedemo.application.contract.Mapper;
 import com.between.pricedemo.application.controller.brand.create.request.BrandCreateRequest;
 import com.between.pricedemo.application.controller.brand.create.response.BrandCreateResponse;
-import com.between.pricedemo.application.contract.Mapper;
 import com.between.pricedemo.domain.entity.Brand;
 import com.between.pricedemo.domain.exception.ResourceCreateException;
 import com.between.pricedemo.domain.repository.BrandCreateInput;

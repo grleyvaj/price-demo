@@ -1,7 +1,6 @@
 package com.between.pricedemo.infrastructure.persistence.entity;
 
 import com.between.pricedemo.domain.entity.Brand;
-import com.between.pricedemo.domain.repository.BrandCreateInput;
 import com.between.pricedemo.utils.FakeClock;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

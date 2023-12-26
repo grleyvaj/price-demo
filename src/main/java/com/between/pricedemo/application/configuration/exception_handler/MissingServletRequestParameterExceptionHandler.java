@@ -1,9 +1,7 @@
 package com.between.pricedemo.application.configuration.exception_handler;
 
 import com.between.pricedemo.application.configuration.exception_handler.response.ValidationErrorResponse;
-import com.between.pricedemo.application.configuration.exception_handler.response.ValidationErrorResponseCreator;
 import com.between.pricedemo.application.configuration.exception_handler.response.ValidationErrorResponseList;
-import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
@@ -22,8 +20,6 @@ import java.util.List;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Slf4j
 public class MissingServletRequestParameterExceptionHandler {
-
-    private final ValidationErrorResponseCreator validationErrorResponseCreator;
 
     @ExceptionHandler(MissingServletRequestParameterException.class)
     public ResponseEntity<Object> handleMissingServletRequest(MissingServletRequestParameterException ex) {

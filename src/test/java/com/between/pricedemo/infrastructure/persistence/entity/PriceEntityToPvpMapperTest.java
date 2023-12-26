@@ -1,6 +1,5 @@
 package com.between.pricedemo.infrastructure.persistence.entity;
 
-import com.between.pricedemo.application.controller.product.get_pvp.response.PriceDetailResponse;
 import com.between.pricedemo.domain.entity.Pvp;
 import com.between.pricedemo.utils.FakeClock;
 import org.junit.jupiter.api.Test;
@@ -20,13 +19,7 @@ class PriceEntityToPvpMapperTest {
 
     @Test
     void when_values_are_given_then_they_can_be_retrieved() {
-        PriceEntity entity = new PriceEntity()
-                .setId(6L)
-                .setProductId(7L)
-                .setBrandId(8L)
-                .setStartDate(FakeClock.pastDateTime())
-                .setEndDate(FakeClock.future())
-                .setPrice(new BigDecimal("23.0"));
+        PriceEntity entity = new PriceEntity().setId(6L).setProductId(7L).setBrandId(8L).setStartDate(FakeClock.pastDateTime()).setEndDate(FakeClock.future()).setPrice(new BigDecimal("23.0"));
 
         Pvp actual = this.mapper.map(entity);
 
