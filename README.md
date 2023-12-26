@@ -1,17 +1,16 @@
 # PRICE API REST
-API REST que expone un servicio para calcular el precio final PVP de un producto para una tarifa, desarrollado con `Spring Boot`, `Spring Data`, `JPA` y `H2`. 
+API REST que expone un servicio para calcular el precio final PVP de un producto para una tarifa, desarrollado con `Spring Boot`, `Spring Data`, `JPA` y `H2`, bajo una `arquitectura hexagonal`centrada en `Domain Driver Design`
 Se implementan como buenas prácticas la optimicación de queries, documentación de la api, pruebas, patrones, separación de responsabilidades, desacoplamiento entre capas, interfaces, clases genéricas, entre otros. 
 Para escribir un código más simple y legible se aplican anotaciones, implementan validadores y emplea `Lombok`.
-Se aplican principios de una arquitectura hexagonal, centrada en `Domain Driver Design`.
 Para gestionar migraciones `flyway`.
-La API fue documentada con `Open API Swagger` y testeada con suite de pruebas en `Postman` y desarrollaron pruebas automatizadas con `JUnit`.
-
+La API fue documentada con `Open API Swagger`, y testeada con suite de pruebas en `Postman` y pruebas automatizadas con `JUnit`.
 
 # REQUERIMIENTOS Y SET UP
 - Java 18
 - Maven. El `pom` contiene todas las dependencias y versiones:
-  
-    `mvn clean install`
+    ```
+      mvn clean install
+    ```
 - Puerto 8000 disponible. Sino modificarlo usando la variable de entorno `ENV_PORT` o directamente en `application.yml`:
   
       server:
@@ -23,10 +22,10 @@ La API fue documentada con `Open API Swagger` y testeada con suite de pruebas en
 
 ### DOCUMENTACION SWAGGER:
 
-Disponible una vez se encuentre el proyecto en ejecución por: http://localhost:8000/api/v1/swagger-ui.html
+Disponible una vez se encuentre el proyecto en ejecución por: http://localhost:8000/api/v1/swagger-ui.html [[here](http://localhost:8000/api/v1/swagger-ui.html)]
 ![swagger_view.png](readme%2Fswagger_view.png)
 
-La api first se encuentra en el repo en: `docs/api_first_v1.0.yml`
+La api first se encuentra en el repo en: `docs/api_first_v1.0.yml` [[here](https://github.com/grleyvaj/price-demo/blob/main/docs/api_first_v1.0.yml)]
 
 Las descripciones de la documentación se externalizaron en arichivos con diferentes lenguajes propiamente para ello (para dejar el código limpio). Por defecto cargo la documentación en inglés, para cambiar a español modifique por `_es`:
 
@@ -35,10 +34,10 @@ Las descripciones de la documentación se externalizaron en arichivos con difere
 ![swagger_view_es.png](readme%2Fswagger_view_es.png)
 
 ### COLLECCION POSTMAN
-Se ha añadido la colección de Postman realizada al repo. En: `docs/postman_collection.json`.
+Se ha añadido la colección de Postman realizada al repo. En: `docs/postman_collection.json`. [[here](https://github.com/grleyvaj/price-demo/blob/main/docs/postman_collection.json)]
 
 ### BASE DE DATOS h2
-Disponible una vez se encuentre el proyecto en ejecución por: http://localhost:8000/api/v1/h2-ui/. Este path se puede modificar en:
+Disponible una vez se encuentre el proyecto en ejecución por: http://localhost:8000/api/v1/h2-ui/ [[here](http://localhost:8000/api/v1/h2-ui/)]. Este path se puede modificar en:
     
     h2:
       console:
@@ -59,7 +58,7 @@ Se puede activar la vista de sql mediante:
 
 ### MIGRACIONES:
 
-Se definieron migraciones (`/resources/db/migration`) con flyway para:
+Se definieron migraciones (`/resources/db/migration`) [[here](https://github.com/grleyvaj/price-demo/tree/main/src/main/resources/db/migration)] con flyway para:
 - definir la estructura inicial de la DB (DDL)
 - tener datos de pruebas para pruebas de integración
 
